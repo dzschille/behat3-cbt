@@ -1,0 +1,26 @@
+default:
+    extensions:
+        Behat\MinkExtension:
+            default_session: selenium2
+            browser_name: chrome
+            selenium2:
+                wd_host: http://localhost:4444/wd/hub
+                #wd_host: https://user:key@crossbrowsertesting.com/wd/hub
+                #capabilities: {"name":"Behat - test","extra_capabilities": {"os_api_name":"Win10","browser_api_name":"Edge20","resolution":"1920x1080","build":"1.0.0","record_video":"true","record_network":"true","max_duration":300}}
+                capabilities:
+                    version: ""
+                    name: "Behat - test"
+                    extra_capabilities:
+                        os_api_name: Win10
+                        browser_api_name: Edge20
+                        resolution: 1920x1080
+                        build: 1.0.0
+                        record_video: true
+                        record_network: true
+                        max_duration: 300
+
+    suites:
+        default:
+            paths:
+                features: features
+                bootstrap: features/bootstrap
